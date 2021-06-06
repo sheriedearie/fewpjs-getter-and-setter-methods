@@ -1,30 +1,34 @@
+const PI = Math.PI
+
 class Circle {
     constructor (radius){
     this.radius = radius;
     }
 // correctly returns the radius property of a Circle instance using `circle.radius`
-    get PI (){
-       return this.PI;
-    }
 
     get diameter (){
         return this.radius + this.radius;
     }
     // the diameter of a circle using the pseudo-property `circle.diameter`
 
-    set diameter(newDiameter){
-        this.radius = Math.radius(newDiameter);
-    }
     get circumference (){
-        return this.PI + this.diameter;
+        return PI * this.diameter;
+    }
+    
+    get area (){
+        return PI * this.radius * this.radius;
+    }
+    set diameter(newDiameter){
+        this.radius = (newDiameter / 2);
     }
 
-    get area (){
-        return this.PI * this.radius * this.radius;
+    set circumference(newCircumference){
+        this.radius = (newCircumference / (PI *2))
     }
 }
 
-let Circle = new Circle()
+
+// let Circle = new Circle()
 // Define getter methods for diameter, circumference, 
 // and area which will calculate each value using this.radius and pi
 
